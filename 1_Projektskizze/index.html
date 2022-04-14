@@ -107,13 +107,13 @@
 			       löschen()
 			       wiederherstellen()
 			}
+			Gruppen_Liste <|-- ToDoListe
+			Private_Liste <|-- ToDoListe
 			ToDoListe <|-- Kalender
 			Kalender <|-- Private_Liste :GoogleKalender
 			Kalender <|-- Gruppen_Liste :GoogleKalender
 			Private_Liste <|-- Papierkorb
 			Gruppen_Liste <|-- Papierkorb	
-			Gruppen_Liste <|-- ToDoListe
-			Private_Liste <|-- ToDoListe
 			Gruppen_Liste <|-- Gruppen_Liste_privat		   
 		</div>
 		<h2>4. Aufwandsschätzung und Aufteilung</h2>
