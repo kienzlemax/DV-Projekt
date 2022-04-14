@@ -75,37 +75,35 @@
 				String Wohnhort
 				Int Matrikelnummer
 				String E-Mail
-				...()
-				...()
+				erstellen()
+				löschen()
+			 	
 			}
 			class Private_Liste {
 				int Aufgaben
 				erledigt()
-				überschritten()
+				&uumlberschritten()
 				privat()
 				
 			}
 			class Gruppen_Liste {
 				int Aufgaben
 				erledigt()
-				überschritten()
-				öffentlich()
-			}
-			class Geld {
-				int Ausgabe
-				bezahlen()
+				&uumlberschritten()
+				&oumlffentlich()
 			}
 			class Kalender {
+				String VerknüpfungKalender
 			}
 			class Papierkorb {
+			       löschen()
+			       wiederherstellen()
 			}
 			ToDoListe <|-- Kalender
-			Kalender <|-- Private_Liste
-			Kalender <|-- Gruppen_Liste
+			Kalender <|--:GoogleKalender Private_Liste
+			Kalender <|--:GoogleKalender Gruppen_Liste
 			Private_Liste <|-- Papierkorb
 			Gruppen_Liste <|-- Papierkorb	
-			Private_Liste <|-- Geld
-			Gruppen_Liste <|-- Geld	
 		</div>
 		<h2>4. Aufwandsschätzung und Aufteilung</h2>
 		<p>TODO: Schätzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.</p>
