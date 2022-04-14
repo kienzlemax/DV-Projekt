@@ -80,14 +80,14 @@
 			 	
 			}
 			class Private_Liste {
-				int Aufgaben
+				String Aufgaben
 				erledigt()
 				&uumlberschritten()
 				privat()
 				
 			}
 			class Gruppen_Liste {
-				int Aufgaben
+				String Aufgaben
 				erledigt()
 				&uumlberschritten()
 				&oumlffentlich()
@@ -100,8 +100,8 @@
 			       wiederherstellen()
 			}
 			ToDoListe <|-- Kalender
-			Kalender <|--:GoogleKalender Private_Liste
-			Kalender <|--:GoogleKalender Gruppen_Liste
+			Kalender <|-- Private_Liste :GoogleKalender
+			Kalender <|-- Gruppen_Liste :GoogleKalender
 			Private_Liste <|-- Papierkorb
 			Gruppen_Liste <|-- Papierkorb	
 		</div>
