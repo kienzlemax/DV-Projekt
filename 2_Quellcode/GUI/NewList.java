@@ -13,6 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.Button;
 
 public class NewList extends JFrame {
 
@@ -41,14 +42,15 @@ public class NewList extends JFrame {
 	 */
 	public NewList() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(450, 200, 439, 300);
+		setBounds(450, 200, 439, 341);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 61, 434, 200);
+		panel.setForeground(Color.WHITE);
+		panel.setBounds(0, 61, 434, 241);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -73,26 +75,51 @@ public class NewList extends JFrame {
 		panel.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
 		lblNewLabel_3.setIcon(new ImageIcon(NewList.class.getResource("/icons/icons8-aufgabenliste-32 (1).png")));
 		lblNewLabel_3.setBounds(50, 122, 32, 32);
 		panel.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
 		lblNewLabel_4.setIcon(new ImageIcon(NewList.class.getResource("/icons/icons8-aufgabenliste-32 (2).png")));
 		lblNewLabel_4.setBounds(120, 122, 32, 32);
 		panel.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
 		lblNewLabel_5.setIcon(new ImageIcon(NewList.class.getResource("/icons/icons8-aufgabenliste-32 (3).png")));
 		lblNewLabel_5.setBounds(190, 122, 32, 32);
 		panel.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
 		lblNewLabel_6.setIcon(new ImageIcon(NewList.class.getResource("/icons/icons8-aufgabenliste-32 (4).png")));
 		lblNewLabel_6.setBounds(260, 122, 32, 32);
 		panel.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
 		lblNewLabel_7.setIcon(new ImageIcon(NewList.class.getResource("/icons/icons8-aufgabenliste-32.png")));
 		lblNewLabel_7.setBounds(330, 122, 32, 32);
 		panel.add(lblNewLabel_7);
@@ -117,6 +144,11 @@ public class NewList extends JFrame {
 		separator_3.setBackground(Color.WHITE);
 		separator_3.setBounds(313, 115, 5, 50);
 		panel.add(separator_3);
+		
+		Button button = new Button("Create");
+		button.setBackground(new Color(128, 0, 128));
+		button.setBounds(178, 195, 70, 22);
+		panel.add(button);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.DARK_GRAY);
@@ -144,5 +176,4 @@ public class NewList extends JFrame {
 		lblNewLabel_8.setBounds(383, 5, 46, 14);
 		panel_1.add(lblNewLabel_8);
 	}
-
 }
