@@ -13,6 +13,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JButton;
+import java.awt.Button;
 
 public class NewGroup extends JFrame {
 
@@ -41,7 +43,7 @@ public class NewGroup extends JFrame {
 	 */
 	public NewGroup() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(450, 200, 437, 300);
+		setBounds(450, 200, 437, 341);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -49,7 +51,7 @@ public class NewGroup extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setForeground(Color.WHITE);
-		panel.setBounds(0, 61, 434, 200);
+		panel.setBounds(0, 61, 434, 241);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -119,6 +121,11 @@ public class NewGroup extends JFrame {
 		separator_1_3.setBounds(313, 115, 5, 50);
 		panel.add(separator_1_3);
 		
+		Button button = new Button("Create");
+		button.setBackground(new Color(128, 0, 128));
+		button.setBounds(178, 195, 70, 22);
+		panel.add(button);
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setForeground(Color.WHITE);
 		panel_1.setBackground(Color.DARK_GRAY);
@@ -146,5 +153,4 @@ public class NewGroup extends JFrame {
 		lblNewLabel_4.setBounds(383, 0, 46, 14);
 		panel_1.add(lblNewLabel_4);
 	}
-
 }

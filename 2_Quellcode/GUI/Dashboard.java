@@ -29,6 +29,8 @@ public class Dashboard extends JFrame {
 	private JPanel panel2;
 	
 	
+	
+	
 	int xx,xy;
 
 	/**
@@ -96,7 +98,7 @@ public class Dashboard extends JFrame {
 		panel.add(lblMenu);
 		
 		panel1 = new JPanel();
-		panel1.setBackground(new Color(148, 0, 211));
+		panel1.setBackground(new Color(128, 0, 128));
 		panel1.setBounds(0, 90, 100, 184);
 		panel.add(panel1);
 		panel1.setLayout(null);
@@ -149,6 +151,15 @@ public class Dashboard extends JFrame {
 		panel1.add(lblNewGroupList);
 		
 		JLabel lblList = new JLabel("");
+		lblList.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				
+				
+				
+			}
+		});
 		lblList.setIcon(new ImageIcon(Dashboard.class.getResource("/icons/icons8-aufgabenliste-20.png")));
 		lblList.setBounds(20, 103, 20, 20);
 		panel1.add(lblList);
@@ -175,7 +186,7 @@ public class Dashboard extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(JOptionPane.showConfirmDialog(Dashboard, "Sind Sie sich sicher ?") ==0 ) {
 					Dashboard.this.dispose();
-					Login frame =new Login();
+					Login frame = new Login();
 					frame.setUndecorated(true);
 					frame.setVisible(true);
 				}
@@ -183,7 +194,7 @@ public class Dashboard extends JFrame {
 			}
 		});
 		btnLogout.setForeground(Color.WHITE);
-		btnLogout.setBackground(new Color(148, 0, 212));
+		btnLogout.setBackground(new Color(128, 0, 128));
 		btnLogout.setBounds(15, 406, 70, 22);
 		panel.add(btnLogout);
 		

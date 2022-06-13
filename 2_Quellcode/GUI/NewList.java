@@ -14,11 +14,13 @@ import javax.swing.JSeparator;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Button;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class NewList extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	public JTextField tfName;
 
 	/**
 	 * Launch the application.
@@ -65,10 +67,10 @@ public class NewList extends JFrame {
 		lblNewLabel_1.setBounds(10, 24, 46, 14);
 		panel.add(lblNewLabel_1);
 		
-		textField = new JTextField();
-		textField.setBounds(10, 49, 414, 20);
-		panel.add(textField);
-		textField.setColumns(10);
+		tfName = new JTextField();
+		tfName.setBounds(10, 49, 414, 20);
+		panel.add(tfName);
+		tfName.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Logo");
 		lblNewLabel_2.setBounds(10, 80, 46, 14);
@@ -146,6 +148,14 @@ public class NewList extends JFrame {
 		panel.add(separator_3);
 		
 		Button button = new Button("Create");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Checklist frame = new Checklist();
+				frame.setVisible(true);
+				
+			}
+		});
 		button.setBackground(new Color(128, 0, 128));
 		button.setBounds(178, 195, 70, 22);
 		panel.add(button);
