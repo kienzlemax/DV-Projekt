@@ -11,26 +11,24 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.List;
 
-import javax.swing.JToolBar;
+import com.google.api.services.calendar.Calendar;
+import java.security.GeneralSecurityException;
+import java.io.IOException;
+
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JCheckBox;
+
 import javax.swing.SwingConstants;
-import javax.swing.JList;
-import java.awt.SystemColor;
+
 import java.awt.Font;
 
 public class Todoliste extends JFrame {
 
 	private JPanel ctnAufgabe1;
-	private JTextField textField;
 	private JButton done;
 	
-	private boolean checked;
 	private JLabel lblAufgabe1;
 	private JLabel lblAufgabe2;
 	private JLabel lblAufgabe3;
@@ -67,7 +65,7 @@ public class Todoliste extends JFrame {
 	 */
 	public Todoliste() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 566, 377);
 		ctnAufgabe1 = new JPanel();
 		ctnAufgabe1.setBackground(Color.GRAY);
 		ctnAufgabe1.setForeground(Color.GRAY);
@@ -99,12 +97,14 @@ public class Todoliste extends JFrame {
 		lblNewLabel.setBounds(10, 0, 426, 40);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		ctnAufgabe1.add(lblNewLabel);
+		String Summary = lblNewLabel.getText();
 		
 		lblAufgabe1 = new JLabel("1.");
 		lblAufgabe1.setBackground(Color.DARK_GRAY);
 		lblAufgabe1.setForeground(Color.WHITE);
 		lblAufgabe1.setBounds(10, 98, 312, 13);
 		ctnAufgabe1.add(lblAufgabe1);
+		
 		
 		lblAufgabe2 = new JLabel("2.");
 		lblAufgabe2.setForeground(Color.WHITE);
@@ -136,7 +136,7 @@ public class Todoliste extends JFrame {
 		lblAufgabe7.setBounds(10, 237, 312, 13);
 		ctnAufgabe1.add(lblAufgabe7);
 		
-		txtEingabe = new JTextField("Hier kommen die Aufgaben rein");
+		txtEingabe = new JTextField("Hier kommen die Aufgaben rein 20.02.25");
 		txtEingabe.setBounds(10, 69, 416, 19);
 		ctnAufgabe1.add(txtEingabe);
 		txtEingabe.setColumns(10);
@@ -234,6 +234,17 @@ public class Todoliste extends JFrame {
 			// TODO Auto-generated method stub
 				String a = txtEingabe.getText();
 				lblAufgabe1.setText("1. "+a);
+				try {
+                    Calendar service = CalenderWrapper.generateConnection();
+                    CalenderWrapper.createEvent(service, a);
+                } catch (GeneralSecurityException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+
 		}
 	}
 	private class UnserListener2 implements ActionListener {
@@ -255,6 +266,7 @@ public class Todoliste extends JFrame {
 			
 				String c = txtEingabe.getText();
 				lblAufgabe3.setText("3. "+c);
+
 				
 		}
 		
@@ -268,6 +280,7 @@ public class Todoliste extends JFrame {
 				String d = txtEingabe.getText();
 				lblAufgabe4.setText("4. "+d);
 				
+				
 		}
 		
 	}
@@ -279,6 +292,7 @@ public class Todoliste extends JFrame {
 			
 				String y= txtEingabe.getText();
 				lblAufgabe5.setText("5. "+y);
+			
 				
 		}
 		
@@ -291,6 +305,7 @@ public class Todoliste extends JFrame {
 			
 				String f = txtEingabe.getText();
 				lblAufgabe6.setText("6. "+f);
+			
 				
 		}
 		
@@ -303,6 +318,7 @@ public class Todoliste extends JFrame {
 			
 				String g = txtEingabe.getText();
 				lblAufgabe7.setText("7. "+g);
+			
 				
 		}
 		
@@ -400,6 +416,4 @@ public class Todoliste extends JFrame {
 		}
 		
 	}
-	
-	
 }
