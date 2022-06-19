@@ -254,6 +254,16 @@ public class Todoliste extends JFrame {
 			// TODO Auto-generated method stub
 				String b = txtEingabe.getText();
 				lblAufgabe2.setText("2. "+b);
+				try {
+                    Calendar service = CalenderWrapper.generateConnection();
+                    CalenderWrapper.createEvent(service, b);
+                } catch (GeneralSecurityException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
 				
 		}
 		
@@ -266,6 +276,16 @@ public class Todoliste extends JFrame {
 			
 				String c = txtEingabe.getText();
 				lblAufgabe3.setText("3. "+c);
+				try {
+                    Calendar service = CalenderWrapper.generateConnection();
+                    CalenderWrapper.createEvent(service, c);
+                } catch (GeneralSecurityException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
 
 				
 		}
@@ -279,6 +299,16 @@ public class Todoliste extends JFrame {
 			
 				String d = txtEingabe.getText();
 				lblAufgabe4.setText("4. "+d);
+				try {
+                    Calendar service = CalenderWrapper.generateConnection();
+                    CalenderWrapper.createEvent(service, d);
+                } catch (GeneralSecurityException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
 				
 				
 		}
@@ -292,6 +322,16 @@ public class Todoliste extends JFrame {
 			
 				String y= txtEingabe.getText();
 				lblAufgabe5.setText("5. "+y);
+				try {
+                    Calendar service = CalenderWrapper.generateConnection();
+                    CalenderWrapper.createEvent(service, y);
+                } catch (GeneralSecurityException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
 			
 				
 		}
@@ -305,6 +345,16 @@ public class Todoliste extends JFrame {
 			
 				String f = txtEingabe.getText();
 				lblAufgabe6.setText("6. "+f);
+				try {
+                    Calendar service = CalenderWrapper.generateConnection();
+                    CalenderWrapper.createEvent(service, f);
+                } catch (GeneralSecurityException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
 			
 				
 		}
@@ -318,6 +368,16 @@ public class Todoliste extends JFrame {
 			
 				String g = txtEingabe.getText();
 				lblAufgabe7.setText("7. "+g);
+				try {
+                    Calendar service = CalenderWrapper.generateConnection();
+                    CalenderWrapper.createEvent(service, g);
+                } catch (GeneralSecurityException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
 			
 				
 		}
