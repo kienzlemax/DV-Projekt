@@ -204,7 +204,7 @@ public class Todoliste extends JFrame {
 		
 		JButton btndelet_1_3 = new JButton("delet");
 		btndelet_1_3.setFont(new Font("Tahoma", Font.PLAIN, 9));
-		btndelet_1_3.setBounds(319, 167, 58, 13);
+		btndelet_1_3.setBounds(319, 168, 58, 13);
 		ctnAufgabe1.add(btndelet_1_3);
 		btndelet_1_3.addActionListener(new UnserListener12());
 		
