@@ -15,7 +15,7 @@ public class addNachname {
 		try { 
 			Connection con = DriverManager.getConnection(url, user, pass);
 			Statement stmt = con.createStatement();
-			return stmt.executeUpdate("INSERT INTO user(Nachname) VALUES" + notiz + "´)");
+			return stmt.executeUpdate("INSERT INTO user(Nachname) VALUES" + notiz + "Â´)");	//SQL-Sprache, eintragen in die Nachnamen Spalte
 		}
 		catch (SQLException e) {
 			return 0;
