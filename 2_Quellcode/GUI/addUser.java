@@ -12,11 +12,11 @@ public class addUser {
 		try { 
 			Connection con = DriverManager.getConnection(url, user, pass);
 			Statement stmt = con.createStatement();
-			return stmt.executeUpdate("INSERT INTO user(Vorname) VALUES" + notiz + "´)");
+			return stmt.executeUpdate("INSERT INTO user(Vorname) VALUES" + notiz + "Â´)");	//SQL-Sprache, eintragen in die Vornamen Spalte
 		}
 		catch (SQLException e) {
 			return 0;
 		}
 		}
 }
-// für jede Variable machen
+// fÃ¼r jede Variable machen
