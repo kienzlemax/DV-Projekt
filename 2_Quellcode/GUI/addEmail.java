@@ -3,10 +3,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class addEmail {
+public class addEmail {		//Klasse für Email Button
 	
 
-	public int eintragen(String notiz) {
+	public int eintragen(String notiz) {		
 		
 	    String url = "jdbc:mysql://localhost:3306/todoliste";
 	    String user = "root";
@@ -15,7 +15,7 @@ public class addEmail {
 		try { 
 			Connection con = DriverManager.getConnection(url, user, pass);
 			Statement stmt = con.createStatement();
-			return stmt.executeUpdate("INSERT INTO user(E-Mail) VALUES" + notiz + "�)");
+			return stmt.executeUpdate("INSERT INTO user(E-Mail) VALUES" + notiz + "´)"); //Eingabe in Spalte Email hinzufügen, SQL-Sprache
 		}
 		catch (SQLException e) {
 			return 0;
