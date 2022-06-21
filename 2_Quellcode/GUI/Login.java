@@ -45,12 +45,12 @@ public class Login extends JFrame {
 			Login();
 		}
 		
-		public addNummer() {
+		public addUser() {
 			super();
 			Login();
 		}
 		
-		public addUser() {
+		public addNummer() {
 			super();
 			Login();
 		}
@@ -121,25 +121,25 @@ public class Login extends JFrame {
 				String user = tfEMail.getText();
 				String password = passwordField.getText();
 				
-				 if (new addEmail().eintragen(jTextField.getText()) > 0)
-    				 System.out.println("Daten erfolgreich eingetragen.");
-    				 else 
-    				 System.out.println("Eintragen der Daten nicht erfolgreich.");
-				
-				 if (new addNummer().eintragen(jTextField.getText()) > 0)
-    				 System.out.println("Daten erfolgreich eingetragen.");
-    				 else 
-    				 System.out.println("Eintragen der Daten nicht erfolgreich.");
-				
-				 if (new addNachname().eintragen(jTextField.getText()) > 0)
-    				 System.out.println("Daten erfolgreich eingetragen.");
-    				 else 
-    			         System.out.println("Eintragen der Daten nicht erfolgreich.");
-				
-				 if (new addUser().eintragen(jTextField.getText()) > 0)
-    				 System.out.println("Daten erfolgreich eingetragen.");
-    				 else 
-    				 System.out.println("Eintragen der Daten nicht erfolgreich.");
+	if (new addUser().eintragen(jTextField.getText()) > 0)
+    		System.out.println("Daten erfolgreich eingetragen.");
+    	else 
+    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+    	
+    	if (new addNachname().eintragen(jTextField.getText()) > 0)
+    		System.out.println("Daten erfolgreich eingetragen.");
+    	else 
+    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+    	
+    	if (new addEmail().eintragen(jTextField.getText()) > 0)
+    		System.out.println("Daten erfolgreich eingetragen.");
+    	else 
+    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+    	
+    	if (new addNummer().eintragen(jTextField.getText()) > 0)
+    		System.out.println("Daten erfolgreich eingetragen.");
+    	else 
+    		System.out.println("Eintragen der Daten nicht erfolgreich.");
 				
 				if(user.equals("kienzle-maximilian@t-online.de") && password.equals("266371")) {
 				Login.this.dispose();
