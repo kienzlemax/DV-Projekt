@@ -34,27 +34,6 @@ public class Login extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		
-		public addEmail() {
-			super();
-			Login();
-		}
-		
-		public addNachname() {
-			super();
-			Login();
-		}
-		
-		public addNummer() {
-			super();
-			Login();
-		}
-		
-		public addUser() {
-			super();
-			Login();
-		}
-		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -120,26 +99,6 @@ public class Login extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String user = tfEMail.getText();
 				String password = passwordField.getText();
-				
-				 if (new addEmail().eintragen(jTextField.getText()) > 0)
-    				 System.out.println("Daten erfolgreich eingetragen.");
-    				 else 
-    				 System.out.println("Eintragen der Daten nicht erfolgreich.");
-				
-				 if (new addNummer().eintragen(jTextField.getText()) > 0)
-    				 System.out.println("Daten erfolgreich eingetragen.");
-    				 else 
-    				 System.out.println("Eintragen der Daten nicht erfolgreich.");
-				
-				 if (new addNachname().eintragen(jTextField.getText()) > 0)
-    				 System.out.println("Daten erfolgreich eingetragen.");
-    				 else 
-    			         System.out.println("Eintragen der Daten nicht erfolgreich.");
-				
-				 if (new addUser().eintragen(jTextField.getText()) > 0)
-    				 System.out.println("Daten erfolgreich eingetragen.");
-    				 else 
-    				 System.out.println("Eintragen der Daten nicht erfolgreich.");
 				
 				if(user.equals("kienzle-maximilian@t-online.de") && password.equals("266371")) {
 				Login.this.dispose();
