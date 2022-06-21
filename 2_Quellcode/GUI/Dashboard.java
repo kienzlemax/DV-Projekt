@@ -32,7 +32,6 @@ public class Dashboard extends JFrame {
 	
 	
 	int xx,xy;
-	protected Object labelList1;
 
 	/**
 	 * Launch the application.
@@ -155,9 +154,6 @@ public class Dashboard extends JFrame {
 		lblList.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				URList list = new URList();
-				list.setVisible(true);
 				
 				
 				

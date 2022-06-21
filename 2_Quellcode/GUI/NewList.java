@@ -20,9 +20,7 @@ import java.awt.event.ActionEvent;
 public class NewList extends JFrame {
 
 	private JPanel contentPane;
-	public static JTextField tfName;
-	
-	
+	public JTextField tfName;
 
 	/**
 	 * Launch the application.
@@ -153,21 +151,8 @@ public class NewList extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				String inputText = tfName.getText();
-				
-				URList list = new URList();
-				list.lblList1.setText(inputText);
-				list.setVisible(true);
-				
-				Dashboard frame = new Dashboard();
-				frame.setUndecorated(true);
+				Checklist frame = new Checklist();
 				frame.setVisible(true);
-				
-				NewList newList = new NewList();
-				newList.dispose();
-				
-				
-				
 				
 			}
 		});
