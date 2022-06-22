@@ -66,17 +66,16 @@ public class Todoliste extends JFrame {
 	 * Create the frame.
 	 */
 	public Todoliste() {
-<<<<<<< HEAD
+
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 566, 377);
-=======
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-<<<<<<< HEAD
+
 		setBounds(100, 100, 450, 377);
->>>>>>> 69e44e2410ed4df3e71b3c27048e18f7065d3920
-=======
+
 		setBounds(100, 100, 566, 377);
->>>>>>> 27a6a2535d4778d8c75ecb975598a38b22699f42
+
 		ctnAufgabe1 = new JPanel();
 		ctnAufgabe1.setBackground(Color.GRAY);
 		ctnAufgabe1.setForeground(Color.GRAY);
@@ -102,7 +101,7 @@ public class Todoliste extends JFrame {
 		
 
 		
-<<<<<<< HEAD
+
 		lblName = new JLabel("");
 		lblName.setFont(lblName.getFont().deriveFont(lblName.getFont().getStyle() | Font.BOLD,16));
 		lblName.setForeground(new Color(255, 255, 255));
@@ -110,15 +109,6 @@ public class Todoliste extends JFrame {
 		lblName.setHorizontalAlignment(SwingConstants.CENTER);
 		ctnAufgabe1.add(lblName);
 		
-=======
-		JLabel lblNewLabel = new JLabel("My List");
-		lblNewLabel.setFont(lblNewLabel.getFont().deriveFont(lblNewLabel.getFont().getStyle() | Font.BOLD));
-		lblNewLabel.setForeground(new Color(255, 255, 255));
-		lblNewLabel.setBounds(10, 0, 426, 40);
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		ctnAufgabe1.add(lblNewLabel);
-		String Summary = lblNewLabel.getText();
->>>>>>> 69e44e2410ed4df3e71b3c27048e18f7065d3920
 		
 		lblAufgabe1 = new JLabel("1.");
 		lblAufgabe1.setBackground(Color.DARK_GRAY);
