@@ -156,7 +156,7 @@ public class Dashboard extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				URList list = new URList();
+				Todoliste list = new Todoliste();
 				list.setVisible(true);
 				
 				
