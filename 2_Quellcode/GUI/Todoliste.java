@@ -136,7 +136,7 @@ public class Todoliste extends JFrame {
 		lblAufgabe7.setBounds(10, 237, 312, 13);
 		ctnAufgabe1.add(lblAufgabe7);
 		
-		txtEingabe = new JTextField("Hier kommen die Aufgaben rein 20.02.25");
+		txtEingabe = new JTextField("Hier kommen die Aufgaben rein 20.02.2022");
 		txtEingabe.setBounds(10, 69, 416, 19);
 		ctnAufgabe1.add(txtEingabe);
 		txtEingabe.setColumns(10);

@@ -23,23 +23,23 @@ public class Login extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField tfEMail;
-	private JPasswordField passwordField;
 	private JLabel lblretry;
 	private JLabel lblEMail;
 	private JLabel lblMatrikelnummer;
 	private JButton btnretry; 
 	private Button btnLogin;
+	private JTextField txtPasswordField;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		
+	/*	
 		public addEmail() {
 			super();
 			Login();
-		}
 		
+		}
 		public addNachname() {
 			super();
 			Login();
@@ -54,7 +54,7 @@ public class Login extends JFrame {
 			super();
 			Login();
 		}
-		
+		*/
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -111,35 +111,13 @@ public class Login extends JFrame {
 		lblMatrikelnummer.setBounds(217, 162, 268, 20);
 		contentPane.add(lblMatrikelnummer);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(217, 193, 280, 31);
-		contentPane.add(passwordField);
-		
 		btnLogin = new Button("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String user = tfEMail.getText();
-				String password = passwordField.getText();
+				String password = txtPasswordField.getText();
 				
-	if (new addUser().eintragen(jTextField.getText()) > 0)
-    		System.out.println("Daten erfolgreich eingetragen.");
-    	else 
-    		System.out.println("Eintragen der Daten nicht erfolgreich.");
-    	
-    	if (new addNachname().eintragen(jTextField.getText()) > 0)
-    		System.out.println("Daten erfolgreich eingetragen.");
-    	else 
-    		System.out.println("Eintragen der Daten nicht erfolgreich.");
-    	
-    	if (new addEmail().eintragen(jTextField.getText()) > 0)
-    		System.out.println("Daten erfolgreich eingetragen.");
-    	else 
-    		System.out.println("Eintragen der Daten nicht erfolgreich.");
-    	
-    	if (new addNummer().eintragen(jTextField.getText()) > 0)
-    		System.out.println("Daten erfolgreich eingetragen.");
-    	else 
-    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+	
 				
 				if(user.equals("kienzle-maximilian@t-online.de") && password.equals("266371")) {
 				Login.this.dispose();
@@ -148,7 +126,7 @@ public class Login extends JFrame {
 				frame.setVisible(true);}
 				
 				else lblretry.setText("Login fehlgeschlagen, bitte erneut versuchen!!!");
-				passwordField.setVisible(false);
+				txtPasswordField.setVisible(false);
 				tfEMail.setVisible(false);
 				lblMatrikelnummer.setVisible(false);
 				lblEMail.setVisible(false);
@@ -192,6 +170,11 @@ public class Login extends JFrame {
 		});
 		btnretry.setBounds(309, 264, 89, 23);
 		contentPane.add(btnretry);
+		
+		txtPasswordField = new JTextField();
+		txtPasswordField.setBounds(217, 197, 280, 31);
+		contentPane.add(txtPasswordField);
+		txtPasswordField.setColumns(10);
 		btnretry.setVisible(false);
 		
 		

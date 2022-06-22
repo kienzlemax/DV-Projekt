@@ -27,7 +27,7 @@ public class Home extends JFrame {
 	private JTextField tfVorname;
 	private JTextField tfNachname;
 	private JTextField tfEMail;
-	private JPasswordField passwordField;
+	private JTextField passwordField;
 	private JLabel lblresign;
     private Home Home;
     private JLabel lblVorname;
@@ -65,6 +65,29 @@ public class Home extends JFrame {
 	 * Create the frame.
 	 */
 	public Home() {
+		
+		if (new addUser().eintragen(tfVorname.getText()) > 0)
+    		System.out.println("Daten erfolgreich eingetragen.");
+    	else 
+    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+    	
+    	if (new addNachname().eintragen(tfNachname.getText()) > 0)
+    		System.out.println("Daten erfolgreich eingetragen.");
+    	else 
+    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+    	
+    	if (new addEmail().eintragen(tfEMail.getText()) > 0)
+    		System.out.println("Daten erfolgreich eingetragen.");
+    	else 
+    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+    	
+    	if (new addNummer().eintragen(passwordField.getText()) > 0)
+    		System.out.println("Daten erfolgreich eingetragen.");
+    	else 
+    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+		
+		
+		
 		setBackground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 686, 420);
@@ -191,7 +214,7 @@ public class Home extends JFrame {
 		lblMatrikelnummer.setBounds(285, 218, 185, 14);
 		contentPane.add(lblMatrikelnummer);
 		
-		passwordField = new JPasswordField();
+		passwordField = new JTextField();
 		passwordField.setBounds(285, 243, 280, 31);
 		contentPane.add(passwordField);
 		
