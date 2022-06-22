@@ -7,6 +7,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class URList extends JFrame {
 
@@ -33,7 +35,7 @@ public class URList extends JFrame {
 	 * Create the frame.
 	 */
 	public URList() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -41,6 +43,14 @@ public class URList extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
+		panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				Todoliste frame = new Todoliste();
+				frame.setVisible(true);
+			}
+		});
 		panel.setBackground(Color.DARK_GRAY);
 		panel.setBounds(10, 11, 255, 44);
 		contentPane.add(panel);
