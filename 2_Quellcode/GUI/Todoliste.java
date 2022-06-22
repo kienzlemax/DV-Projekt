@@ -18,6 +18,8 @@ import java.io.IOException;
 
 
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 
 import javax.swing.SwingConstants;
@@ -54,6 +56,7 @@ public class Todoliste extends JFrame {
 			public void run() {
 				try {
 					Todoliste frame = new Todoliste();
+					frame.setUndecorated(true);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -99,6 +102,20 @@ public class Todoliste extends JFrame {
 		
 		getContentPane().add(done);
 		
+		
+		
+		JLabel lblNewLabel_8 = new JLabel("X");
+		lblNewLabel_8.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Todoliste.this.dispose();
+			}
+		});
+		lblNewLabel_8.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_8.setForeground(Color.RED);
+		lblNewLabel_8.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblNewLabel_8.setBounds(383, 5, 175, 14);
+		ctnAufgabe1.add(lblNewLabel_8);
 
 		
 
