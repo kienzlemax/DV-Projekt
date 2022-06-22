@@ -159,10 +159,6 @@ public class NewList extends JFrame {
 				list.lblList1.setText(inputText);
 				list.setVisible(true);
 				
-				Dashboard frame = new Dashboard();
-				frame.setUndecorated(true);
-				frame.setVisible(true);
-				
 				NewList newList = new NewList();
 				newList.dispose();
 				
