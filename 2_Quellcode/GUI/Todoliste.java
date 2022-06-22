@@ -65,7 +65,7 @@ public class Todoliste extends JFrame {
 	 */
 	public Todoliste() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 377);
+		setBounds(100, 100, 566, 377);
 		ctnAufgabe1 = new JPanel();
 		ctnAufgabe1.setBackground(Color.GRAY);
 		ctnAufgabe1.setForeground(Color.GRAY);
@@ -92,48 +92,48 @@ public class Todoliste extends JFrame {
 
 		
 		JLabel lblNewLabel = new JLabel("My List");
-		lblNewLabel.setBounds(10, 0, 426, 40);
 		lblNewLabel.setFont(lblNewLabel.getFont().deriveFont(lblNewLabel.getFont().getStyle() | Font.BOLD));
 		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setBounds(10, 0, 426, 40);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		ctnAufgabe1.add(lblNewLabel);
 		String Summary = lblNewLabel.getText();
 		
 		lblAufgabe1 = new JLabel("1.");
-		lblAufgabe1.setBounds(10, 98, 312, 13);
 		lblAufgabe1.setBackground(Color.DARK_GRAY);
 		lblAufgabe1.setForeground(Color.WHITE);
+		lblAufgabe1.setBounds(10, 98, 312, 13);
 		ctnAufgabe1.add(lblAufgabe1);
 		
 		
 		lblAufgabe2 = new JLabel("2.");
-		lblAufgabe2.setBounds(10, 121, 312, 13);
 		lblAufgabe2.setForeground(Color.WHITE);
+		lblAufgabe2.setBounds(10, 121, 312, 13);
 		ctnAufgabe1.add(lblAufgabe2);
 		
 		lblAufgabe3 = new JLabel("3.");
-		lblAufgabe3.setBounds(10, 144, 312, 13);
 		lblAufgabe3.setForeground(Color.WHITE);
+		lblAufgabe3.setBounds(10, 144, 312, 13);
 		ctnAufgabe1.add(lblAufgabe3);
 		
 		lblAufgabe4 = new JLabel("4.");
-		lblAufgabe4.setBounds(10, 168, 312, 13);
 		lblAufgabe4.setForeground(Color.WHITE);
+		lblAufgabe4.setBounds(10, 168, 312, 13);
 		ctnAufgabe1.add(lblAufgabe4);
 		
 		lblAufgabe5 = new JLabel("5.");
-		lblAufgabe5.setBounds(10, 191, 312, 13);
 		lblAufgabe5.setForeground(Color.WHITE);
+		lblAufgabe5.setBounds(10, 191, 312, 13);
 		ctnAufgabe1.add(lblAufgabe5);
 		
 		lblAufgabe6 = new JLabel("6.");
-		lblAufgabe6.setBounds(10, 214, 312, 13);
 		lblAufgabe6.setForeground(Color.WHITE);
+		lblAufgabe6.setBounds(10, 214, 312, 13);
 		ctnAufgabe1.add(lblAufgabe6);
 		
 		lblAufgabe7 = new JLabel("7.");
-		lblAufgabe7.setBounds(10, 237, 312, 13);
 		lblAufgabe7.setForeground(Color.WHITE);
+		lblAufgabe7.setBounds(10, 237, 312, 13);
 		ctnAufgabe1.add(lblAufgabe7);
 		
 		txtEingabe = new JTextField("Hier kommen die Aufgaben rein 20.02.2022");
@@ -143,86 +143,86 @@ public class Todoliste extends JFrame {
 		getContentPane().add(txtEingabe);
 		
 		JButton btnAddTask_1 = new JButton("Add");
-		btnAddTask_1.setBounds(375, 98, 51, 13);
 		btnAddTask_1.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btnAddTask_1.setBounds(375, 98, 51, 13);
 		ctnAufgabe1.add(btnAddTask_1);
 		btnAddTask_1.addActionListener(new UnserListener1());
 		
 		btnAddTask_2 = new JButton("Add");
-		btnAddTask_2.setBounds(375, 121, 51, 13);
 		btnAddTask_2.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btnAddTask_2.setBounds(375, 121, 51, 13);
 		ctnAufgabe1.add(btnAddTask_2);
 		btnAddTask_2.addActionListener(new UnserListener2());
 		
 		btnAddTask_3 = new JButton("Add");
-		btnAddTask_3.setBounds(375, 144, 51, 13);
 		btnAddTask_3.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btnAddTask_3.setBounds(375, 144, 51, 13);
 		ctnAufgabe1.add(btnAddTask_3);
 		btnAddTask_3.addActionListener(new UnserListener3());
 		
 		btnAddTask_4 = new JButton("Add");
-		btnAddTask_4.setBounds(375, 168, 51, 13);
 		btnAddTask_4.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btnAddTask_4.setBounds(375, 168, 51, 13);
 		ctnAufgabe1.add(btnAddTask_4);
 		btnAddTask_4.addActionListener(new UnserListener4());
 		
 		btnAddTask_5 = new JButton("Add");
-		btnAddTask_5.setBounds(375, 191, 51, 13);
 		btnAddTask_5.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btnAddTask_5.setBounds(375, 191, 51, 13);
 		ctnAufgabe1.add(btnAddTask_5);
 		btnAddTask_5.addActionListener(new UnserListener5());
 		
 		btnAddTask_6 = new JButton("Add");
-		btnAddTask_6.setBounds(375, 214, 51, 13);
 		btnAddTask_6.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btnAddTask_6.setBounds(375, 214, 51, 13);
 		ctnAufgabe1.add(btnAddTask_6);
 		btnAddTask_6.addActionListener(new UnserListener6());
 		
 		btnAddTask_7 = new JButton("Add");
-		btnAddTask_7.setBounds(375, 237, 51, 13);
 		btnAddTask_7.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btnAddTask_7.setBounds(375, 237, 51, 13);
 		ctnAufgabe1.add(btnAddTask_7);
 		btnAddTask_7.addActionListener(new UnserListener7());
 		
 		JButton btndelet_1 = new JButton("delet");
-		btndelet_1.setBounds(319, 98, 58, 13);
 		btndelet_1.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btndelet_1.setBounds(319, 98, 58, 13);
 		ctnAufgabe1.add(btndelet_1);
 		btndelet_1.addActionListener(new UnserListener9());
 		
 		JButton btndelet_1_1 = new JButton("delet");
-		btndelet_1_1.setBounds(319, 121, 58, 13);
 		btndelet_1_1.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btndelet_1_1.setBounds(319, 121, 58, 13);
 		ctnAufgabe1.add(btndelet_1_1);
 		btndelet_1_1.addActionListener(new UnserListener10());
 		
 		JButton btndelet_1_2 = new JButton("delet");
-		btndelet_1_2.setBounds(319, 144, 58, 13);
 		btndelet_1_2.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btndelet_1_2.setBounds(319, 144, 58, 13);
 		ctnAufgabe1.add(btndelet_1_2);
 		btndelet_1_2.addActionListener(new UnserListener11());
 		
 		JButton btndelet_1_3 = new JButton("delet");
-		btndelet_1_3.setBounds(319, 168, 58, 13);
 		btndelet_1_3.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btndelet_1_3.setBounds(319, 168, 58, 13);
 		ctnAufgabe1.add(btndelet_1_3);
 		btndelet_1_3.addActionListener(new UnserListener12());
 		
 		JButton btndelet_1_4 = new JButton("delet");
-		btndelet_1_4.setBounds(319, 191, 58, 13);
 		btndelet_1_4.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btndelet_1_4.setBounds(319, 191, 58, 13);
 		ctnAufgabe1.add(btndelet_1_4);
 		btndelet_1_4.addActionListener(new UnserListener13());
 		
 		JButton btndelet_1_5 = new JButton("delet");
-		btndelet_1_5.setBounds(319, 214, 58, 13);
 		btndelet_1_5.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btndelet_1_5.setBounds(319, 214, 58, 13);
 		ctnAufgabe1.add(btndelet_1_5);
 		btndelet_1_5.addActionListener(new UnserListener14());
 		
 		JButton btndelet_1_6 = new JButton("delet");
-		btndelet_1_6.setBounds(319, 237, 58, 13);
 		btndelet_1_6.setFont(new Font("Tahoma", Font.PLAIN, 9));
+		btndelet_1_6.setBounds(319, 237, 58, 13);
 		ctnAufgabe1.add(btndelet_1_6);
 		btndelet_1_6.addActionListener(new UnserListener15());
 		
