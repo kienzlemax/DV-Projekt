@@ -155,8 +155,8 @@ public class NewList extends JFrame {
 				
 				String inputText = tfName.getText();
 				
-				URList list = new URList();
-				list.lblList1.setText(inputText);
+				Todoliste list = new Todoliste();
+				list.lblName.setText(inputText);
 				list.setVisible(true);
 				
 				NewList newList = new NewList();

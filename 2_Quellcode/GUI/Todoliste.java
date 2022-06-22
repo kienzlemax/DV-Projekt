@@ -29,6 +29,8 @@ public class Todoliste extends JFrame {
 	private JPanel ctnAufgabe1;
 	private JButton done;
 	
+	public JLabel lblName;
+	
 	private JLabel lblAufgabe1;
 	private JLabel lblAufgabe2;
 	private JLabel lblAufgabe3;
@@ -64,8 +66,17 @@ public class Todoliste extends JFrame {
 	 * Create the frame.
 	 */
 	public Todoliste() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+<<<<<<< HEAD
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 566, 377);
+=======
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+<<<<<<< HEAD
+		setBounds(100, 100, 450, 377);
+>>>>>>> 69e44e2410ed4df3e71b3c27048e18f7065d3920
+=======
+		setBounds(100, 100, 566, 377);
+>>>>>>> 27a6a2535d4778d8c75ecb975598a38b22699f42
 		ctnAufgabe1 = new JPanel();
 		ctnAufgabe1.setBackground(Color.GRAY);
 		ctnAufgabe1.setForeground(Color.GRAY);
@@ -91,6 +102,15 @@ public class Todoliste extends JFrame {
 		
 
 		
+<<<<<<< HEAD
+		lblName = new JLabel("");
+		lblName.setFont(lblName.getFont().deriveFont(lblName.getFont().getStyle() | Font.BOLD,16));
+		lblName.setForeground(new Color(255, 255, 255));
+		lblName.setBounds(10, 0, 350, 40);
+		lblName.setHorizontalAlignment(SwingConstants.CENTER);
+		ctnAufgabe1.add(lblName);
+		
+=======
 		JLabel lblNewLabel = new JLabel("My List");
 		lblNewLabel.setFont(lblNewLabel.getFont().deriveFont(lblNewLabel.getFont().getStyle() | Font.BOLD));
 		lblNewLabel.setForeground(new Color(255, 255, 255));
@@ -98,6 +118,7 @@ public class Todoliste extends JFrame {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		ctnAufgabe1.add(lblNewLabel);
 		String Summary = lblNewLabel.getText();
+>>>>>>> 69e44e2410ed4df3e71b3c27048e18f7065d3920
 		
 		lblAufgabe1 = new JLabel("1.");
 		lblAufgabe1.setBackground(Color.DARK_GRAY);
@@ -136,7 +157,7 @@ public class Todoliste extends JFrame {
 		lblAufgabe7.setBounds(10, 237, 312, 13);
 		ctnAufgabe1.add(lblAufgabe7);
 		
-		txtEingabe = new JTextField("Hier kommen die Aufgaben rein 20.02.25");
+		txtEingabe = new JTextField("Hier kommen die Aufgaben rein 20.02.2022");
 		txtEingabe.setBounds(10, 69, 416, 19);
 		ctnAufgabe1.add(txtEingabe);
 		txtEingabe.setColumns(10);

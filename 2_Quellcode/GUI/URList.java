@@ -47,7 +47,11 @@ public class URList extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
+				String inputText = lblName.getText();
+				
+				
 				Todoliste frame = new Todoliste();
+				frame.lblName.setText(inputText);
 				frame.setVisible(true);
 			}
 		});
