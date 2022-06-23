@@ -157,7 +157,9 @@ public class NewList extends JFrame {
 				
 				Todoliste list = new Todoliste();
 				list.lblName.setText(inputText);
+				list.setUndecorated(true);
 				list.setVisible(true);
+				
 				
 				NewList newList = new NewList();
 				newList.dispose();
