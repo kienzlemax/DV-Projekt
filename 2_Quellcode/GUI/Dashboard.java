@@ -157,6 +157,7 @@ public class Dashboard extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				
 				Todoliste list = new Todoliste();
+				list.setUndecorated(true);
 				list.setVisible(true);
 				
 				
