@@ -92,26 +92,6 @@ public class Home extends JFrame {
 	 */
 	public Home() {
 		
-		if (new addUser().eintragen(tfVorname.getText()) > 0)
-    		System.out.println("Daten erfolgreich eingetragen.");
-    	else 
-    		System.out.println("Eintragen der Daten nicht erfolgreich.");
-    	
-    	if (new addNachname().eintragen(tfNachname.getText()) > 0)
-    		System.out.println("Daten erfolgreich eingetragen.");
-    	else 
-    		System.out.println("Eintragen der Daten nicht erfolgreich.");
-    	
-    	if (new addEmail().eintragen(tfEMail.getText()) > 0)
-    		System.out.println("Daten erfolgreich eingetragen.");
-    	else 
-    		System.out.println("Eintragen der Daten nicht erfolgreich.");
-    	
-    	if (new addNummer().eintragen(passwordField.getText()) > 0)
-    		System.out.println("Daten erfolgreich eingetragen.");
-    	else 
-    		System.out.println("Eintragen der Daten nicht erfolgreich.");
-		
 		
 		/** Creates and initializes a new Pane (ContentPane), where all the other applications are added to
 		 * The settings like Backgroundcolor, Close-Operation, Bounds are initialized.
@@ -209,8 +189,31 @@ public class Home extends JFrame {
 			public void actionPerformed(ActionEvent e) {				
 				String firstname = tfVorname.getText();  //saves the text from tfVorname into the String firstname
 				String lastname = tfNachname.getText();  //saves the text from tfNachname into the String lastname
-				String password = passwordField.getText();  //saves the text from passwordfield into the String password
+				String password = passwordField.getText();  //saves the text from passwordField into the String password
 				String user = tfEMail.getText();            //saves the text from tfEMail into the String user
+				
+				
+				if (new addUser().eintragen(tfVorname.getText()) > 0)
+		    		System.out.println("Daten erfolgreich eingetragen.");
+		    	else 
+		    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+		    	
+		    	if (new addNachname().eintragen(tfNachname.getText()) > 0)
+		    		System.out.println("Daten erfolgreich eingetragen.");
+		    	else 
+		    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+		    	
+		    	if (new addEmail().eintragen(tfEMail.getText()) > 0)
+		    		System.out.println("Daten erfolgreich eingetragen.");
+		    	else 
+		    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+		    	
+		    	if (new addNummer().eintragen(passwordField.getText()) > 0)
+		    		System.out.println("Daten erfolgreich eingetragen.");
+		    	else 
+		    		System.out.println("Eintragen der Daten nicht erfolgreich.");
+				
+				
 				
 				/**
 				 * Following code section is used to control if the text from the password are only numbers
