@@ -19,6 +19,11 @@ import javax.swing.SwingConstants;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -53,8 +58,8 @@ public class Home extends JFrame {
     private Button btnresign;  
     private Button btnSignUp;
     private Button btnLogin;
-    
-    
+		
+	
 	/**
 	 * Creates the parameter xx/yy ; x/y which are used to drag the JFrame to another place on the screen.
 	 * 
@@ -86,13 +91,15 @@ public class Home extends JFrame {
 			}
 		});
 	}
+	
+
 
 	/**
 	 * Create the frame (Home) .
 	 */
 	public Home() {
 		
-		
+
 		/** Creates and initializes a new Pane (ContentPane), where all the other applications are added to
 		 * The settings like Backgroundcolor, Close-Operation, Bounds are initialized.
 		 * 
@@ -184,6 +191,7 @@ public class Home extends JFrame {
 		 * 
 		 * @author MaxKienzle
 		 */
+		 
 		btnSignUp = new Button("SignUp");
 		btnSignUp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
@@ -192,6 +200,82 @@ public class Home extends JFrame {
 				String password = passwordField.getText();  //saves the text from passwordField into the String password
 				String user = tfEMail.getText();            //saves the text from tfEMail into the String user
 				
+				 class addNummer {
+					
+					public int eintragen(String string) {
+						
+					    String url = "jdbc:mysql://localhost:3306/todoliste";
+					    String user = "root";
+					    String pass = "";
+					    
+						try { 
+							Connection con = DriverManager.getConnection(url, user, pass);
+							Statement stmt = con.createStatement();
+							return stmt.executeUpdate("INSERT INTO user(Matrikelnummer) VALUES" + string + "´)");	//SQL-Sprache, eintragen in die Matrikelnummer Spalte
+						}
+						catch (SQLException e) {
+							return 0;
+						}
+						}
+				}
+				
+				 class addUser {
+						
+						public int eintragen(String notiz) {
+							
+						    String url = "jdbc:mysql://localhost:3306/todoliste";
+						    String user = "root";
+						    String pass = "";
+						    
+						    Connection con = null;
+							try { 
+								con = DriverManager.getConnection(url, user, pass);
+								Statement stmt = con.createStatement();
+								return stmt.executeUpdate("INSERT INTO user(Vorname) VALUES" + notiz + "�)");	//SQL-Sprache, eintragen in die Vornamen Spalte
+							}
+							catch (SQLException e) {
+								return 0;
+							}
+							}
+					}
+
+				 class addNachname {
+						
+						public int eintragen(String notiz) {
+							
+						    String url = "jdbc:mysql://localhost:3306/todoliste";
+						    String user = "root";
+						    String pass = "";
+						    
+							try { 
+								Connection con = DriverManager.getConnection(url, user, pass);
+								Statement stmt = con.createStatement();
+								return stmt.executeUpdate("INSERT INTO user(Nachname) VALUES" + notiz + "´)");	//SQL-Sprache, eintragen in die Nachnamen Spalte
+							}
+							catch (SQLException e) {
+								return 0;
+							}
+							}
+					}
+				 
+				 class addEmail {			
+
+						public int eintragen(String notiz) {		
+							
+						    String url = "jdbc:mysql://localhost:3306/todoliste";
+						    String user = "root";
+						    String pass = "";
+						    
+							try { 
+								Connection con = DriverManager.getConnection(url, user, pass);
+								Statement stmt = con.createStatement();
+								return stmt.executeUpdate("INSERT INTO user(E-Mail) VALUES" + notiz + "´)"); //Eingabe in Spalte Email hinzufügen, SQL-Sprache
+							}
+							catch (SQLException e) {
+								return 0;
+							}
+							}
+					}
 				
 				if (new addUser().eintragen(tfVorname.getText()) > 0)
 		    		System.out.println("Daten erfolgreich eingetragen.");
