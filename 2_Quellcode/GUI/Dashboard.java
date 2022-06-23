@@ -21,6 +21,13 @@ import java.awt.event.MouseMotionAdapter;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * 
+ * public class Dashboard generates a JFrame (GUI) for MainMenu for our ToDoList.
+ * 
+ * @author MaxKienzle
+ *
+ */
 public class Dashboard extends JFrame {
 
 	private JPanel contentPane;
@@ -28,11 +35,20 @@ public class Dashboard extends JFrame {
 	private JPanel panel1;
 	private JPanel panel2;
 	
-	
+	/**
+	 * Creates the parameter xx/yy ; x/y which are used to drag the JFrame to another place on the screen.
+	 * 
+	 * @param xx , yy /   xx = start position on screen x-parameter / yy = start position on screen y-parameter.
+	 * 
+	 * @param x , y / x = final position on screen x-parameter / y = final position on screen y-parameter
+	 * 
+	 * @author MaxKienzle
+	 */
 	
 	
 	int xx,xy;
-	protected Object labelList1;
+	
+	int x,y;
 
 	/**
 	 * Launch the application.
@@ -52,9 +68,17 @@ public class Dashboard extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the frame (Dashboard).
 	 */
 	public Dashboard() {
+		
+		
+		/** Creates and initializes a new Pane (ContentPane), where all the other applications are added to
+		 * The settings like Backgroundcolor, Close-Operation, Bounds are initialized.
+		 * 
+		 * @author MaxKienzle
+		 */
+		
 		setBackground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(350, 100, 607, 461);
@@ -64,20 +88,43 @@ public class Dashboard extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.addMouseMotionListener(new MouseMotionAdapter() {
+		
+		
+		
+		/**
+		 * Initialize another MouseListener, which interacts with the MouseListener after that.
+		 * 
+		 * When the mouse is pressed it gets the X/Y-Parameters and by dragging the Frame to a new position, this mouse Listener 
+		 * gets the new x/y-parameter and calculate the distance between the start and the destination and sets the frame to the 
+		 * the new location.
+		 * 
+		 * @author MaxKienzle
+		 */
+		JPanel panel = new JPanel(); //Where the MouseListener is used on
+		panel.addMouseMotionListener(new MouseMotionAdapter() { // adds the MouseListener 
 			@Override
-			public void mouseDragged(MouseEvent arg0) {
-				int x = arg0.getXOnScreen();
-		        int y = arg0.getYOnScreen();
-		       Dashboard.this.setLocation(x - xx, y - xy);
+			public void mouseDragged(MouseEvent arg0) { //Command of the MouseListener (mouseDragged)
+				x = arg0.getXOnScreen(); // get the x-parameter from the Frame on screen while dragging
+		        y = arg0.getYOnScreen(); // get the y-parameter from the Frame on screen while dragging
+		       Dashboard.this.setLocation(x - xx, y - xy); //calculates the current position of the Frame.
 			}
 		});
+		
+
+		/**
+		 * Initialize a MouseListener, which is used for different commands.
+		 * 
+		 * If you click on the Image on the HomeFrame and hold it, the MouseListener gets the position of parameter xx/yy,
+		 * Which be used to calculate the new Location of the Frame when it is dragged.
+		 * 
+		 * @author MaxKienzle
+		 * 
+		 */
 		panel.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mousePressed(MouseEvent e) {
-				xx = e.getX();
-		        xy = e.getY();
+			public void mousePressed(MouseEvent e) { //Command of the MouseListener (mousePressed)
+				xx = e.getX();  // get the positions of x-parameter
+		        xy = e.getY();  // get the position of y-parameter
 			}
 		});
 		panel.setBackground(Color.DARK_GRAY);
@@ -97,6 +144,10 @@ public class Dashboard extends JFrame {
 		lblMenu.setIcon(new ImageIcon(Dashboard.class.getResource("/icons/icons8-benutzer-men\u00FC-m\u00E4nnlich-32 (2).png")));
 		lblMenu.setBounds(32, 25, 32, 42);
 		panel.add(lblMenu);
+		
+		
+		//all the other applications like Buttons/TextFields etc. are initialized
+		//from here
 		
 		panel1 = new JPanel();
 		panel1.setBackground(new Color(128, 0, 128));
@@ -124,6 +175,8 @@ public class Dashboard extends JFrame {
 		JSeparator separator_4 = new JSeparator();
 		separator_4.setBounds(7, 160, 85, 3);
 		panel1.add(separator_4);
+		
+		// to here
 		
 		JLabel lblNewList = new JLabel("");
 		lblNewList.addMouseListener(new MouseAdapter() {
@@ -155,10 +208,6 @@ public class Dashboard extends JFrame {
 		lblList.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				Todoliste list = new Todoliste();
-				list.setUndecorated(true);
-				list.setVisible(true);
 				
 				
 				
