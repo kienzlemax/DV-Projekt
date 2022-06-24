@@ -192,6 +192,7 @@ public class Home extends JFrame {
 		 * @author MaxKienzle
 		 */
 		 
+		//"SignUp"-Button
 		btnSignUp = new Button("SignUp");
 		btnSignUp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
@@ -354,41 +355,49 @@ public class Home extends JFrame {
 		btnSignUp.setBounds(352, 302, 166, 31);
 		contentPane.add(btnSignUp);
 		
+		//"Vorname"-TextField
 		tfVorname = new JTextField();
 		tfVorname.setBounds(285, 40, 280, 31);
 		contentPane.add(tfVorname);
 		tfVorname.setColumns(10);
 		
+		//"Vorname"-Lettering
 		lblVorname = new JLabel("Vorname");
 		lblVorname.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblVorname.setBounds(285, 11, 93, 31);
 		contentPane.add(lblVorname);
 		
+		//"Nachname"-Lettering
 		lblNachname = new JLabel("Nachname");
 		lblNachname.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNachname.setBounds(285, 82, 234, 24);
 		contentPane.add(lblNachname);
 		
+		//"Nachname"-TextField
 		tfNachname = new JTextField();
 		tfNachname.setColumns(10);
 		tfNachname.setBounds(285, 109, 280, 31);
 		contentPane.add(tfNachname);
 		
+		//"E-Mail"-Lettering
 		lblEMail = new JLabel("E-Mail");
 		lblEMail.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblEMail.setBounds(285, 151, 46, 14);
 		contentPane.add(lblEMail);
 		
+		//"E-Mail"-TextField
 		tfEMail = new JTextField();
 		tfEMail.setColumns(10);
 		tfEMail.setBounds(285, 176, 280, 31);
 		contentPane.add(tfEMail);
 		
+		//"Matrikelnummer"-Lettering
 		lblMatrikelnummer = new JLabel("Matrikelnummer");
 		lblMatrikelnummer.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblMatrikelnummer.setBounds(285, 218, 185, 14);
 		contentPane.add(lblMatrikelnummer);
 		
+		//"Matrikelnummer"-Passwordfield
 		passwordField = new JTextField();
 		passwordField.setBounds(285, 243, 280, 31);
 		contentPane.add(passwordField);
@@ -401,6 +410,8 @@ public class Home extends JFrame {
 		 *
 		 *@author MaxKienzle
 		 */
+		
+		//"X"-Button
 		JLabel lbl_close = new JLabel("X");
 		lbl_close.addMouseListener(new MouseAdapter() {
 			@Override
@@ -411,14 +422,14 @@ public class Home extends JFrame {
 			}
 		});
 		
-		//Generates the Label (lbl_Close) and the Label (lbl_or)
-		
+		//Label for "X"-Button
 		lbl_close.setForeground(Color.RED);
 		lbl_close.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_close.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lbl_close.setBounds(640, 5, 46, 14);
 		contentPane.add(lbl_close);
 		
+		//"or"-Lettering
 		lbl_or = new JLabel("or");
 		lbl_or.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_or.setBounds(411, 339, 46, 14);
@@ -433,6 +444,7 @@ public class Home extends JFrame {
 		 * @author MaxKienzle
 		 */
 		
+		//"Login"-Button
 		btnLogin = new Button("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -449,6 +461,7 @@ public class Home extends JFrame {
 		btnLogin.setBounds(400, 359, 70, 22);
 		contentPane.add(btnLogin);
 		
+		//"Resign"-Label for Text
 		lblresign = new JLabel("");
 		lblresign.setHorizontalAlignment(SwingConstants.CENTER);
 		lblresign.setBounds(285, 151, 385, 24);
@@ -465,6 +478,8 @@ public class Home extends JFrame {
 		 * 
 		 * @author MaxKienzle
 		 */
+		
+		//"Resign"-Button
 		btnresign = new Button("Resign");
 		btnresign.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

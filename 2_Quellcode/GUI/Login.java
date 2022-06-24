@@ -116,6 +116,7 @@ public class Login extends JFrame {
 		 * @author MaxKienzle
 		*/
 		
+		//"Login"-Lettering
 		JLabel lblNewLabel = new JLabel("Login");
 		lblNewLabel.setBounds(55, 166, 71, 67);  //where it is located and which Bounds it has
 		lblNewLabel.setForeground(Color.WHITE);  //Color of the text
@@ -131,7 +132,7 @@ public class Login extends JFrame {
 		 * @author MaxKienzle
 		*/
 		
-		
+		//"Lock"-Sign
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setIcon(new ImageIcon(Login.class.getResource("/images/lock_29411.png"))); // Icon is added into the JLabel
@@ -142,15 +143,18 @@ public class Login extends JFrame {
 		//The rest of the JFrame is added to the contentPane, like E-Mail label, different TextFields etc.
 		//from here
 		
+		//"E-Mail"-Lettering
 		lblEMail = new JLabel("E-Mail");
 		lblEMail.setBounds(217, 67, 46, 14);
 		contentPane.add(lblEMail);
 		
+		//"E-Mail"-TextField
 		tfEMail = new JTextField();
 		tfEMail.setBounds(217, 92, 280, 31);
 		contentPane.add(tfEMail);
 		tfEMail.setColumns(10);
 		
+		//"Matrikelnummer"-Lettering
 		lblMatrikelnummer = new JLabel("Matrikelnummer");
 		lblMatrikelnummer.setBounds(217, 162, 268, 20);
 		contentPane.add(lblMatrikelnummer);
