@@ -41,7 +41,7 @@ public class Dashboard extends JFrame {
 	private JPanel panel2;
 	
 	/**
-	 * Creates the parameter xx/yy ; x/y which are used to drag the JFrame to another place on the screen.
+	 * Generates the parameter xx/yy ; x/y which are used to drag the JFrame to another place on the screen.
 	 * 
 	 * @param xx , yy /   xx = start position on screen x-parameter / yy = start position on screen y-parameter.
 	 * 
