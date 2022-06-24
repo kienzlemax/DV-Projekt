@@ -70,12 +70,11 @@ public class Todoliste extends JFrame {
 	 */
 	public Todoliste() {
 
-		//setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		//setBounds(100, 100, 566, 377);
+		
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		//setBounds(550, 220, 450, 377);
+		
 
 		setBounds(424, 200, 566, 377);
 
