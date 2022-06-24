@@ -180,7 +180,7 @@ public class NewList extends JFrame {
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("NEW LIST");
-		lblNewLabel.setBounds(172, 17, 90, 22);
+		lblNewLabel.setBounds(172, 17, 110, 22);
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
