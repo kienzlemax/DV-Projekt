@@ -18,8 +18,13 @@ import java.awt.event.MouseEvent;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 import java.awt.event.MouseMotionAdapter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Desktop;
+import java.net.URL;
 
 /**
  * 
@@ -222,6 +227,23 @@ public class Dashboard extends JFrame {
 		lblCalendary.setIcon(new ImageIcon(Dashboard.class.getResource("/icons/icons8-kalender-20.png")));
 		lblCalendary.setBounds(20, 135, 20, 20);
 		panel1.add(lblCalendary);
+		/**
+		 * @author Felix
+		 * 
+		 * open Google Calender in Browser
+		 */
+		
+		lblCalendary.addMouseListener(new MouseAdapter (){
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				try {
+					  Desktop.getDesktop().browse(new URL("https://calendar.google.com/calendar/u/0/r").toURI());
+					} catch (Exception ex) {
+					  ex.printStackTrace();
+					}
+			}
+			
+		});
 		
 		panel2 = new JPanel();
 		panel2.setBackground(Color.WHITE);
