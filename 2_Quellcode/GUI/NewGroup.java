@@ -43,7 +43,7 @@ public class NewGroup extends JFrame {
 	 */
 	public NewGroup() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(450, 200, 437, 341);
+		setBounds(500, 220, 437, 341);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

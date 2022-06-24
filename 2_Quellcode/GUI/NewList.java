@@ -46,7 +46,7 @@ public class NewList extends JFrame {
 	 */
 	public NewList() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(450, 200, 439, 341);
+		setBounds(500, 220, 439, 341);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
