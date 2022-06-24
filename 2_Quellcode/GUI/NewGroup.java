@@ -11,11 +11,22 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import java.awt.Button;
 
+
+/**
+ * 
+ * public class NewList generates a JFrame (GUI) to add a NewGroup.
+ * 
+ * @author MaxKienzle
+ *
+ */
 public class NewGroup extends JFrame {
 
 	private JPanel contentPane;
@@ -39,9 +50,17 @@ public class NewGroup extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the frame (NewGroup).
 	 */
 	public NewGroup() {
+		
+		/** 
+		 * Creates and initializes a new Pane (ContentPane), where all the other applications are added to
+		 * The settings like Backgroundcolor, Close-Operation, Bounds are initialized.
+		 * 
+		 * @author MaxKienzle
+		 */
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(500, 220, 437, 341);
 		contentPane = new JPanel();
@@ -49,25 +68,35 @@ public class NewGroup extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
+		//Panel for Icon and TextField
 		JPanel panel = new JPanel();
 		panel.setForeground(Color.WHITE);
 		panel.setBounds(0, 61, 434, 241);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
+		//Lettering Name
 		JLabel lblNewLabel_1 = new JLabel("Name");
 		lblNewLabel_1.setBounds(10, 11, 46, 14);
 		panel.add(lblNewLabel_1);
 		
+		//TextField for the name of the List
 		textField = new JTextField();
 		textField.setBounds(10, 36, 402, 25);
 		panel.add(textField);
 		textField.setColumns(10);
 		
+		//"Logo"-Lettering
 		JLabel lblNewLabel_2 = new JLabel("Logo");
 		lblNewLabel_2.setBounds(10, 85, 46, 14);
 		panel.add(lblNewLabel_2);
 		
+		/**
+		 * MouseListeners added,to choose a color for the NewList (optional).
+		 */
+		
+		//from here (no function), only added the Icons
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setIcon(new ImageIcon(NewGroup.class.getResource("/icons/icons8-nutzergruppe-2-32 (1).png")));
 		lblNewLabel_3.setBounds(50, 122, 32, 32);
@@ -93,6 +122,9 @@ public class NewGroup extends JFrame {
 		lblNewLabel_3_4.setBounds(330, 122, 32, 32);
 		panel.add(lblNewLabel_3_4);
 		
+		//to here
+		
+		//JSeparators are the small lines between the Icons in the GUI, which are separating the Icons vertical.
 		JSeparator separator_1 = new JSeparator();
 		separator_1.setOrientation(SwingConstants.VERTICAL);
 		separator_1.setForeground(Color.WHITE);
@@ -121,11 +153,17 @@ public class NewGroup extends JFrame {
 		separator_1_3.setBounds(313, 115, 5, 50);
 		panel.add(separator_1_3);
 		
+		//"Create"-Button and ActionListener (without function)
 		Button button = new Button("Create");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		button.setBackground(new Color(128, 0, 128));
 		button.setBounds(178, 195, 70, 22);
 		panel.add(button);
 		
+		//Dark Panel for the lettering "New Group"
 		JPanel panel_1 = new JPanel();
 		panel_1.setForeground(Color.WHITE);
 		panel_1.setBackground(Color.DARK_GRAY);
@@ -133,6 +171,7 @@ public class NewGroup extends JFrame {
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
+		//"New List"-Lettering
 		JLabel lblNewLabel = new JLabel("NEW GROUP");
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -140,6 +179,8 @@ public class NewGroup extends JFrame {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel);
 		
+		
+		//"X"-Button
 		JLabel lblNewLabel_4 = new JLabel("X");
 		lblNewLabel_4.addMouseListener(new MouseAdapter() {
 			@Override

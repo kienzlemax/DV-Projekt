@@ -173,7 +173,7 @@ public class Dashboard extends JFrame {
 		panel1.setVisible(false);
 		
 		
-		//JSeparators are the small lines between the Icons in the GUI, which are seperating the Icons
+		//JSeparators are the small lines between the Icons in the GUI, which are separating the Icons
 		JSeparator separator = new JSeparator();
 		separator.setBounds(7, 45, 110, 3);
 		panel1.add(separator);
