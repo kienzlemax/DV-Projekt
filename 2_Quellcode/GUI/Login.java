@@ -167,6 +167,7 @@ public class Login extends JFrame {
 		 * 
 		 */
 		
+		//"Login"-Button
 		btnLogin = new Button("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -204,6 +205,7 @@ public class Login extends JFrame {
 		 * @author MaxKienzle
 		*/
 		
+		//"X"-Button
 		JLabel lblNewLabel_2 = new JLabel("X");
 		lblNewLabel_2.addMouseListener(new MouseAdapter() {
 			@Override
@@ -217,10 +219,6 @@ public class Login extends JFrame {
 		lblNewLabel_2.setBounds(540, 5, 46, 14);
 		contentPane.add(lblNewLabel_2);
 		
-		lblretry = new JLabel("");
-		lblretry.setBounds(227, 134, 280, 31);
-		contentPane.add(lblretry);
-		
 		
 		/**
 		 * The "Retry"-Button is generated with his ActionListener, it will pop up with the Error message.
@@ -228,6 +226,12 @@ public class Login extends JFrame {
 		 * 
 		 * @author MaxKienzle
 		 */
+		
+		//"Retry"-Button
+		lblretry = new JLabel("");
+		lblretry.setBounds(227, 134, 280, 31);
+		contentPane.add(lblretry);
+		
 		
 		btnretry = new JButton("retry");
 		btnretry.addActionListener(new ActionListener() {

@@ -137,6 +137,14 @@ public class Dashboard extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
+		
+		/**
+		 * Initializes the MouseListener for the Label/Icon below, which is later used as 
+		 * Button for the DropDown-Menu, when the Icon is clicked.
+		 * 
+		 * @author MaxKienzle
+		 * 
+		 */
 		JLabel lblMenu = new JLabel("");
 		lblMenu.addMouseListener(new MouseAdapter() {
 			@Override
@@ -145,6 +153,9 @@ public class Dashboard extends JFrame {
 				panel2.setVisible(true);
 			}
 		});
+		
+		//Label for the Icon is generated
+		
 		lblMenu.setBackground(Color.LIGHT_GRAY);
 		lblMenu.setIcon(new ImageIcon(Dashboard.class.getResource("/icons/icons8-benutzer-men\u00FC-m\u00E4nnlich-48.png")));
 		lblMenu.setBounds(32, 25, 48, 48);
@@ -161,6 +172,8 @@ public class Dashboard extends JFrame {
 		panel1.setLayout(null);
 		panel1.setVisible(false);
 		
+		
+		//JSeparators are the small lines between the Icons in the GUI, which are seperating the Icons
 		JSeparator separator = new JSeparator();
 		separator.setBounds(7, 45, 110, 3);
 		panel1.add(separator);
@@ -183,19 +196,36 @@ public class Dashboard extends JFrame {
 		
 		// to here
 		
-		JLabel lblNewList = new JLabel("");
-		lblNewList.addMouseListener(new MouseAdapter() {
+		
+		/**
+		 * The MouseListeners, for each Icon is generated in the Code below.
+		 * Same scheme for every Icon-Button. Icon added to JLabel, MouseListener added to the JLabel
+		 * and if the Icon is pressed, a different JFrame pops up.
+		 * 
+		 * First one is exemplary commented.
+		 * 
+		 * @author MaxKienzle
+		 * 
+		 */
+		 
+		
+		JLabel lblNewList = new JLabel(""); 
+		lblNewList.addMouseListener(new MouseAdapter() { //MouseListener is added to lblNewList
 			@Override
-			public void mouseClicked(MouseEvent e) {
+			public void mouseClicked(MouseEvent e) { //Event of the MouseListener is selected (click)
 				NewList frame =new NewList();
-				frame.setUndecorated(true);
-				frame.setVisible(true);			
+				frame.setUndecorated(true); //Frame of NewList-Frame disposes
+				frame.setVisible(true);		//NewList-Frame Pops up	
 			}
 		});
-		lblNewList.setIcon(new ImageIcon(Dashboard.class.getResource("/icons/icons8-liste-hinzuf\u00FCgen-32.png")));
-		lblNewList.setBounds(20, 7, 32, 32);
-		panel1.add(lblNewList);
 		
+		//JLabel (lblNewList) is added 
+		lblNewList.setIcon(new ImageIcon(Dashboard.class.getResource("/icons/icons8-liste-hinzuf\u00FCgen-32.png"))); //Icon added to Jlabel
+		lblNewList.setBounds(20, 7, 32, 32); //Bounds of the Label are set
+		panel1.add(lblNewList); //Label is added to panel1
+		
+		
+		//"NewGroup"-Button		
 		JLabel lblNewGroupList = new JLabel("");
 		lblNewGroupList.addMouseListener(new MouseAdapter() {
 			@Override
@@ -209,20 +239,14 @@ public class Dashboard extends JFrame {
 		lblNewGroupList.setBounds(20, 52, 32, 32);
 		panel1.add(lblNewGroupList);
 		
+		
+		//"List"-Button
 		JLabel lblList = new JLabel("");
-		lblList.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				
-				
-				
-				
-			}
-		});
 		lblList.setIcon(new ImageIcon(Dashboard.class.getResource("/icons/icons8-aufgabenliste-32.png")));
 		lblList.setBounds(18, 142, 32, 32);
 		panel1.add(lblList);
 		
+		//"Calendar"-Button
 		JLabel lblCalendary = new JLabel("");
 		lblCalendary.setIcon(new ImageIcon(Dashboard.class.getResource("/icons/icons8-kalender-32.png")));
 		lblCalendary.setBounds(20, 187, 32, 32);
@@ -252,11 +276,15 @@ public class Dashboard extends JFrame {
 		panel2.setLayout(null);
 		panel2.setVisible(false);
 		
+		
+		//"Bin"-Button
 		JLabel lblBin = new JLabel("");
 		lblBin.setIcon(new ImageIcon(Dashboard.class.getResource("/icons/icons8-m\u00FCll-l\u00F6schen-20.png")));
 		lblBin.setBounds(37, 5, 20, 20);
 		panel2.add(lblBin);
 		
+		
+		//"Logout"-Button
 		Button btnLogout = new Button("Logout");
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -274,6 +302,8 @@ public class Dashboard extends JFrame {
 		btnLogout.setBounds(25, 496, 70, 22);
 		panel.add(btnLogout);
 		
+		
+		//"X"-Button
 		JLabel lblX = new JLabel("X");
 		lblX.addMouseListener(new MouseAdapter() {
 			@Override
