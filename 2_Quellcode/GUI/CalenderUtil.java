@@ -36,11 +36,12 @@ public class CalenderUtil {
 
 
     /**
-    * Gibt die Startzeit des Termins zurück
-    *
-    * @param  dateInput  das Datum als Text eingabe im Format dd.MM.yyyy
-    * @return   das Datum formatiert im richtigen Objekt für die Kalender Eventanlage
-    */
+     * Gibt die Startzeit des Termins zurück
+     *
+     * @param  dateInput  das Datum als Text eingabe im Format dd.MM.yyyy
+     * @return   das Datum formatiert im richtigen Objekt für die Kalender Eventanlage
+     * @author @davidjl21
+     */
     public static EventDateTime generateStartEventDateTime(String dateInput) {
 
         // Eingabeformats des Datums
@@ -71,12 +72,13 @@ public class CalenderUtil {
     }
 
     /**
-    * Gibt die Endzeit des Termins zurück
-    * Die Funktion rechnet genau 24h (86400000 => in Millisekunden)
-    *
-    * @param  dateInput  das Datum als Text eingabe im Format dd.MM.yyyy
-    * @return   das Datum formatiert im richtigen Objekt für die Kalender Eventanlage
-    */
+     * Gibt die Endzeit des Termins zurück
+     * Die Funktion rechnet genau 24h (86400000 => in Millisekunden)
+     *
+     * @param  dateInput  das Datum als Text eingabe im Format dd.MM.yyyy
+     * @return   das Datum formatiert im richtigen Objekt für die Kalender Eventanlage
+     * @author @davidjl21
+     */
     public static EventDateTime generateEndEventDateTimePlusOneDay(String dateInput) {
         // Eingabeformats des Datums
         DateFormat dateFormatInput = new SimpleDateFormat("dd.MM.yyyy");
@@ -108,9 +110,10 @@ public class CalenderUtil {
     }
 
     /**
-    * Generiert das Reminder Objekt, der danach an das Event Objekt angehängt wir
+    * Generiert das Reminder Objekt, der an das Event Objekt angehängt wird
     *
     * @return   Reminder 
+    * @author @davidjl21
     */
     public static Event.Reminders generateReminders() {
 
