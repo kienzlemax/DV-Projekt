@@ -76,6 +76,7 @@ public class CalenderWrapper {
      * 
      * @return An Calendar Object
      * @throws IOException If the credentials.json file cannot be found.
+     * @author @davidjl21
      */
     public static Calendar generateConnection() {
         // Build a new authorized API client service.
@@ -90,12 +91,13 @@ public class CalenderWrapper {
     }
 	
     /**
-    * Erzeugt das Event und speichert es im Kalender
-    *
-    * @param  service  das Datum als Text eingabe im Format dd.MM.yyyy
-    * @param  eventTitle  
-    * @return   die Event ID - diese muss gespeichert werden um eine nachfolgende Änderung an dem Event sicherzustellen
-    */
+     * Erzeugt das Event und speichert es im Kalender
+     *
+     * @param  service  das Datum als Text eingabe im Format dd.MM.yyyy
+     * @param  eventTitle  
+     * @return   die Event ID - diese muss gespeichert werden um eine nachfolgende Änderung an dem Event sicherzustellen
+     * @author @davidjl21
+     */
 	public static String createEvent(Calendar service, String eventTitle )  {
 
         // Enspricht dem allgemein genutzten deutschen Datumsformat, z.B.:
@@ -145,13 +147,14 @@ public class CalenderWrapper {
 	}
 	
     /**
-    * Passt die den Eventtitel (Summary) an
-    *
-    * @param  service  Kalendar Objekt
-    * @param  eventId  die ID des Events welches angepasst werden soll
-    * @param  summary  Der TExt der geändert werden soll
-    * @return   -
-    */
+     * Passt die den Eventtitel (Summary) an
+     *
+     * @param  service  Kalendar Objekt
+     * @param  eventId  die ID des Events welches angepasst werden soll
+     * @param  summary  Der TExt der geändert werden soll
+     * @return   -
+     * @author @davidjl21
+     */
 	public static void updateEventSummary(Calendar service, String eventId, String summary)  {
         // Ruft das Event über die übergebene Event Id ab
         Event event = service.events().get("primary", eventId).execute();
