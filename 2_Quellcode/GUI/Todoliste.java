@@ -58,7 +58,7 @@ public class Todoliste extends JFrame {
 	}
 
 	/**
-	 * Create the Todolist frame.
+	 * Create the Todoliste frame.
 	 */
 	public Todoliste() {
 
@@ -298,6 +298,9 @@ public class Todoliste extends JFrame {
 			// TODO Auto-generated method stub
 			String a = txtEingabe.getText();
 			lblAufgabe1.setText("1. "+a);
+			/**
+			 * 
+			 */
 			try {
 				Calendar service = CalenderWrapper.generateConnection();
 				CalenderWrapper.createEvent(service, a);
