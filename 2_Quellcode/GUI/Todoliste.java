@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -6,13 +5,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.Desktop;
-import java.awt.Dimension;
-
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
-
 import com.google.api.services.calendar.Calendar;
 import java.security.GeneralSecurityException;
 import java.io.IOException;
@@ -29,10 +24,7 @@ import java.awt.Font;
 public class Todoliste extends JFrame {
 
 	private JPanel ctnAufgabe1;
-	private JButton done;
-
 	public JLabel lblName;
-
 	private JLabel lblAufgabe1;
 	private JLabel lblAufgabe2;
 	private JLabel lblAufgabe3;
