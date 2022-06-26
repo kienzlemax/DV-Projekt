@@ -78,8 +78,9 @@ public class CalenderWrapper {
      * @throws IOException If the credentials.json file cannot be found.
      * @throws FileNotFoundException If the credentials.json file cannot be found.
      * @author @davidjl21
+	 * @throws GeneralSecurityException 
      */
-    public static Calendar generateConnection() throws  IOException, FileNotFoundException {
+    public static Calendar generateConnection() throws  IOException, FileNotFoundException, GeneralSecurityException {
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
 
