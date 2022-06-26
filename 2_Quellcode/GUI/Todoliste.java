@@ -211,43 +211,43 @@ public class Todoliste extends JFrame {
 		ctnAufgabe1.add(btnAddTask_7);
 		btnAddTask_7.addActionListener(new UnserListener7());
 		
-		JButton btndelet_1 = new JButton("delet");
+		JButton btndelet_1 = new JButton("Delete");
 		btndelet_1.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btndelet_1.setBounds(319, 121, 58, 13);
 		ctnAufgabe1.add(btndelet_1);
 		btndelet_1.addActionListener(new UnserListener9());
 		
-		JButton btndelet_1_1 = new JButton("delet");
+		JButton btndelet_1_1 = new JButton("Delete");
 		btndelet_1_1.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btndelet_1_1.setBounds(319, 144, 58, 13);
 		ctnAufgabe1.add(btndelet_1_1);
 		btndelet_1_1.addActionListener(new UnserListener10());
 		
-		JButton btndelet_1_2 = new JButton("delet");
+		JButton btndelet_1_2 = new JButton("Delete");
 		btndelet_1_2.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btndelet_1_2.setBounds(319, 167, 58, 13);
 		ctnAufgabe1.add(btndelet_1_2);
 		btndelet_1_2.addActionListener(new UnserListener11());
 		
-		JButton btndelet_1_3 = new JButton("delet");
+		JButton btndelet_1_3 = new JButton("Delete");
 		btndelet_1_3.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btndelet_1_3.setBounds(319, 191, 58, 13);
 		ctnAufgabe1.add(btndelet_1_3);
 		btndelet_1_3.addActionListener(new UnserListener12());
 		
-		JButton btndelet_1_4 = new JButton("delet");
+		JButton btndelet_1_4 = new JButton("Delete");
 		btndelet_1_4.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btndelet_1_4.setBounds(319, 214, 58, 13);
 		ctnAufgabe1.add(btndelet_1_4);
 		btndelet_1_4.addActionListener(new UnserListener13());
 		
-		JButton btndelet_1_5 = new JButton("delet");
+		JButton btndelet_1_5 = new JButton("Delete");
 		btndelet_1_5.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btndelet_1_5.setBounds(319, 237, 58, 13);
 		ctnAufgabe1.add(btndelet_1_5);
 		btndelet_1_5.addActionListener(new UnserListener14());
 		
-		JButton btndelet_1_6 = new JButton("delet");
+		JButton btndelet_1_6 = new JButton("Delete");
 		btndelet_1_6.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btndelet_1_6.setBounds(319, 260, 58, 13);
 		ctnAufgabe1.add(btndelet_1_6);
