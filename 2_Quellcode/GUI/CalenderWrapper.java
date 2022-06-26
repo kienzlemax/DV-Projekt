@@ -76,9 +76,10 @@ public class CalenderWrapper {
      * 
      * @return An Calendar Object
      * @throws IOException If the credentials.json file cannot be found.
+     * @throws FileNotFoundException If the credentials.json file cannot be found.
      * @author @davidjl21
      */
-    public static Calendar generateConnection() {
+    public static Calendar generateConnection() throws  IOException, FileNotFoundException {
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
 
@@ -98,7 +99,7 @@ public class CalenderWrapper {
      * @return   die Event ID - diese muss gespeichert werden um eine nachfolgende Änderung an dem Event sicherzustellen
      * @author @davidjl21
      */
-	public static String createEvent(Calendar service, String eventTitle )  {
+	public static String createEvent(Calendar service, String eventTitle ) throws  IOException, FileNotFoundException  {
 
         // Enspricht dem allgemein genutzten deutschen Datumsformat, z.B.:
         // 19.06.2022
@@ -155,7 +156,7 @@ public class CalenderWrapper {
      * @return   -
      * @author @davidjl21
      */
-	public static void updateEventSummary(Calendar service, String eventId, String summary)  {
+	public static void updateEventSummary(Calendar service, String eventId, String summary) throws  IOException, FileNotFoundException  {
         // Ruft das Event über die übergebene Event Id ab
         Event event = service.events().get("primary", eventId).execute();
 
