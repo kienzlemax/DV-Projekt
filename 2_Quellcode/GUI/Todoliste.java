@@ -70,11 +70,7 @@ public class Todoliste extends JFrame {
 	 */
 	public Todoliste() {
 
-		
-
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		
 
 		setBounds(424, 200, 566, 377);
 
@@ -89,9 +85,6 @@ public class Todoliste extends JFrame {
 		btnClearList.setBounds(304, 62, 122, 20);
 		ctnAufgabe1.add(btnClearList);
 		btnClearList.addActionListener(new UnserListener8());
-		
-		
-
 		
 		done = new JButton("Done");
 		done.setBounds(0, 0, 0, 0);
@@ -116,8 +109,7 @@ public class Todoliste extends JFrame {
 		lblNewLabel_8.setBounds(383, 5, 175, 14);
 		ctnAufgabe1.add(lblNewLabel_8);
 
-		
-
+		//Create Label for the name of the list
 		lblName = new JLabel("");
 		lblName.setFont(lblName.getFont().deriveFont(lblName.getFont().getStyle() | Font.BOLD,16));
 		lblName.setForeground(new Color(255, 255, 255));
@@ -125,7 +117,7 @@ public class Todoliste extends JFrame {
 		lblName.setHorizontalAlignment(SwingConstants.CENTER);
 		ctnAufgabe1.add(lblName);
 		
-		
+		//Create Label were the task will be safed
 		lblAufgabe1 = new JLabel("1.");
 		lblAufgabe1.setBackground(Color.DARK_GRAY);
 		lblAufgabe1.setForeground(Color.WHITE);
@@ -163,12 +155,14 @@ public class Todoliste extends JFrame {
 		lblAufgabe7.setBounds(10, 260, 312, 13);
 		ctnAufgabe1.add(lblAufgabe7);
 		
+		//Creates Textfield were the Taks can be descripted
 		txtEingabe = new JTextField("Hier kommen die Aufgaben rein 20.02.2022");
 		txtEingabe.setBounds(10, 92, 416, 19);
 		ctnAufgabe1.add(txtEingabe);
 		txtEingabe.setColumns(10);
 		getContentPane().add(txtEingabe);
 		
+		//Creates Button to Add Task in den JLabel
 		JButton btnAddTask_1 = new JButton("Add");
 		btnAddTask_1.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btnAddTask_1.setBounds(375, 121, 51, 13);
@@ -211,6 +205,7 @@ public class Todoliste extends JFrame {
 		ctnAufgabe1.add(btnAddTask_7);
 		btnAddTask_7.addActionListener(new UnserListener7());
 		
+		//Creates Button to delete Task in the JLabel
 		JButton btndelet_1 = new JButton("Delete");
 		btndelet_1.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btndelet_1.setBounds(319, 121, 58, 13);
@@ -252,6 +247,7 @@ public class Todoliste extends JFrame {
 		btndelet_1_6.setBounds(319, 260, 58, 13);
 		ctnAufgabe1.add(btndelet_1_6);
 		
+		//Creates Button to open the Googlekalender 
 		JButton btnOpenKalender = new JButton("Open Kalender");
 		btnOpenKalender.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		btnOpenKalender.setBounds(319, 309, 107, 21);
