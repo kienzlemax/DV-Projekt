@@ -21,9 +21,10 @@ import javax.swing.SwingConstants;
 
 import java.awt.Font;
 
+
 public class Todoliste extends JFrame {
 
-	private JPanel ctnAufgabe1;
+	public JPanel ctnAufgabe1;
 	public JLabel lblName;
 	private JLabel lblAufgabe1;
 	private JLabel lblAufgabe2;
